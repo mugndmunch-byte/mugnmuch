@@ -85,6 +85,7 @@ function siteHtmlVars(): Plugin {
 
 // https://vite.dev/config/
 export default defineConfig({
+  base: '/mugnmuch/',
   plugins: [react(), tailwindcss(), menuPhotos(), siteHtmlVars()],
   resolve: {
     alias: {
