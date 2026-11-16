@@ -34,7 +34,7 @@ function menuPhotos(): Plugin {
   const buildMap = (): Record<string, string> => {
     const map: Record<string, string> = {}
     for (const file of scan(IMAGES_DIR)) {
-      const url = '/' + relative(PUBLIC_DIR, file).split(sep).join('/')
+      const url = '/mugnmuch/' + relative(PUBLIC_DIR, file).split(sep).join('/')
       const key = url.replace(PHOTO_EXT, '')
       // Prefer AVIF > WebP > others when several formats exist.
       const rank = (u: string) => (u.endsWith('.avif') ? 0 : u.endsWith('.webp') ? 1 : 2)
